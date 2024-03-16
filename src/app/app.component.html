@@ -1,0 +1,22 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- <button style="margin-top: 58px;" *ngIf="!isInstalled()" (click)="install()">Install App</button> -->
+<button style="margin-top: 100px; padding: 20px"  >
+  <input placeholder="Add Document" type="file" (change)="addfile($event)">
+</button>
+
+
+<div *ngFor="let doc of documents" >
+  <div style="padding: 20px;cursor: pointer; color: #C4262E; width: fit-content;" (click)="downLoad(doc)">
+    {{ doc.name}}
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
